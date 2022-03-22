@@ -1,0 +1,7 @@
+.card {
+	object-fit: cover;
+	transition: transform 500ms ease;
+}
+.card:hover {
+	transform: scale(1.1);
+}
