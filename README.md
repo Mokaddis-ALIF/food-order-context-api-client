@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+_A Full Stack Food order website_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple yet gorgeous frontend made with **React**,authentication by **Firebase**,backend with **Express.js** and **MongoDB** as database.
 
-## Available Scripts
+1. It starts with a simple navbar just having logo,cart and login,sign up
+2. After that a simple background photo consists where a search-bar exists.User can search breakfast,lunch and dinner by writing these keyword and the results will show below
+3. Below that some collection of food photo will be seen like a gallery
+4. There is a menu section where it will automatically display all the food but user can also search by clicking buttons like breakfast,lunch and dinner
+5. After that there is a service info section
+6. The page ends with a footer
+7. User can add food or can also see the details of the food by clicking in the details button
+8. By clicking the cart icon it will take in to the cart page where it will display all the selected food use can increase,decrease also remove foods by clicking at delete icon there is also a button which clears all the selected food .Here user can also see the amount,items etc
+9. From there user can proceed to order but for that user must be logged in otherwise it will take to login page.User can login or register depends on the situation of user.
+10. After the login or registration it will bring back to the page where user was before login
+11. In the order page user will see its order and there is a form where user can submit some essential info .By submitting the order page it will confirm if the order was taken or not and automatically take the user to order list page .User doesn't need to write manually any of its order
+12. In the order list page user can see only user's order and also can delete his/her order
 
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Live-site: https://food-order-context-api.web.app/
