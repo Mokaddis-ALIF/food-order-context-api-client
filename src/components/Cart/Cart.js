@@ -3,6 +3,7 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CartContext from '../../store/cart-context';
 import CartItem from './CartItem';
+import './Cart.css';
 
 const Cart = () => {
 	const cartCtx = useContext(CartContext);
@@ -31,7 +32,7 @@ const Cart = () => {
 	};
 
 	return (
-		<Container className="mt-5">
+		<Container className="mt-5 cart">
 			<h3 className="text-center text-danger border-bottom w-25 mx-auto">
 				My Cart
 			</h3>
@@ -43,7 +44,8 @@ const Cart = () => {
 				<Row>
 					<Col
 						lg={8}
-						sm={6}
+						sm={12}
+						id="items"
 						className="d-flex flex-column justify-content-between align-items-start"
 					>
 						{cartItems.map((cart) => (
@@ -63,7 +65,8 @@ const Cart = () => {
 					</Col>
 					<Col
 						lg={4}
-						sm={6}
+						sm={12}
+						id="prices"
 						className="d-flex justify-content-end align-items-start mt-5"
 					>
 						<Card

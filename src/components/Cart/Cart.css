@@ -1,0 +1,14 @@
+.cart {
+	min-height: 80vh;
+	height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+	#items {
+		order: 2;
+	}
+
+	#prices {
+		order: 1;
+	}
+}

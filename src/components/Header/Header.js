@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/logo2.png';
 import { BsCart } from 'react-icons/bs';
 import CartContext from '../../store/cart-context';
+import useAuth from '../../Hooks/useAuth';
 
 const Header = () => {
 	const cartCtx = useContext(CartContext);
+	const { user, logOut } = useAuth();
 
 	const cartItemNumbers = cartCtx.items.reduce(
 		(curNumber, item) => curNumber + item.amount,
@@ -55,16 +57,31 @@ const Header = () => {
 									{cartItemNumbers === 0 ? '' : cartItemNumbers}
 								</div>
 							</NavLink>
-							<NavLink className="ms-3" to="/login">
-								<Button className="rounded-pill px-3" variant="light">
-									Login
+							{!user.email ? (
+								<>
+									<NavLink className="ms-3" to="/login">
+										<Button
+											className="rounded-pill px-3 text-light"
+											variant="warning"
+										>
+											Login
+										</Button>
+									</NavLink>
+									<NavLink className="ms-3" to="/register">
+										<Button className="rounded-pill px-3" variant="danger">
+											Sign up
+										</Button>
+									</NavLink>
+								</>
+							) : (
+								<Button
+									className="rounded-pill px-3 ms-3"
+									variant="danger"
+									onClick={logOut}
+								>
+									Log out
 								</Button>
-							</NavLink>
-							<NavLink className="ms-3" to="/register">
-								<Button className="rounded-pill px-3" variant="danger">
-									Sign up
-								</Button>
-							</NavLink>
+							)}
 						</Nav>
 					</Navbar.Collapse>
 				</Container>

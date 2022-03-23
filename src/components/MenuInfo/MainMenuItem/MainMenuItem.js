@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './MainMenuItem.css';
-import { BsCart } from 'react-icons/bs';
 import CartContext from '../../../store/cart-context';
 
 const MainMenuItem = ({ menuItem }) => {
@@ -48,9 +47,6 @@ const MainMenuItem = ({ menuItem }) => {
 					>
 						Add to Cart
 					</Button>
-					{/* <div className="text-danger h4" onClick={addToCartHandler}>
-						<BsCart />
-					</div> */}
 				</div>
 			</div>
 		</div>

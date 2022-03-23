@@ -1,43 +1,63 @@
-import React, { useEffect, useState } from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import React, { useContext, useEffect, useState } from 'react';
+import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import { items } from '../Data/Data';
 import './MenuDetails.css';
-import Button from 'react-bootstrap/Button';
+
+import CartContext from '../../store/cart-context';
 
 const MenuDetails = () => {
 	const { id } = useParams();
 
-	const newitem = items.find((item) => item._id == id);
-	const { title, price, img, desc } = newitem;
+	const cartCtx = useContext(CartContext);
+
+	const [products, setProducts] = useState([]);
+
+	useEffect(() => {
+		fetch(`https://sheltered-forest-65434.herokuapp.com/products`)
+			.then((res) => res.json())
+			.then((data) => setProducts(data));
+	}, [setProducts]);
+
+	const newItem = products.find((item) => item._id == id);
+	console.log(newItem);
+
+	const addToCartHandler = () => {
+		cartCtx.addItem({
+			id: newItem?._id,
+			title: newItem?.title,
+			amount: 1,
+			price: newItem?.price,
+			img: newItem?.img,
+		});
+	};
 
 	return (
 		<div id="details">
-			{/* <Container>
+			<Container>
 				<Row>
 					<Col
-						sm={7}
-						className="d-flex flex-column justify-content-center align-item-center"
+						lg={6}
+						sm={12}
+						className="d-flex flex-column justify-content-center align-items-start gap-2"
 					>
-						<div className="text-start">
-							<h1>{title}</h1>
-							<p>{desc}</p>
-							<h1>${price}</h1>
-							<div className="d-flex flex-row justify-content-start">
-								<Button onClick className="mx-1" variant="danger">
-									Add
-								</Button>
-								<Button className="mx-1 ms-3" variant="light"></Button>
-								<span className="text-danger mx-1">quantity</span>
-								<Button className="mx-1" variant="light"></Button>
-							</div>
-						</div>
+						<h2>{newItem?.title}</h2>
+						<p className="lead">{newItem?.desc}</p>
+
+						<h3>${newItem?.price}</h3>
+
+						<Button variant="danger" onClick={addToCartHandler}>
+							Add To Cart
+						</Button>
 					</Col>
-					<Col sm={5}>
-						<Image src={img} fluid />
+					<Col
+						lg={6}
+						sm={12}
+						className="d-flex flex-column justify-content-center align-items-center"
+					>
+						<Image src={newItem?.img} fluid className="w-75 mt-5" />
 					</Col>
 				</Row>
-			</Container> */}
+			</Container>
 		</div>
 	);
 };

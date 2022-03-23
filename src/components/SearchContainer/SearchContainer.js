@@ -4,7 +4,20 @@ import { ImSearch } from 'react-icons/im';
 
 import { Container } from 'react-bootstrap';
 
-const SearchContainer = () => {
+const SearchContainer = ({ setDisplayProducts, products }) => {
+	const handleSearch = (event) => {
+		const searchText = event.target.value;
+
+		const matchedProducts = products.filter((product) =>
+			product.category.toLowerCase().includes(searchText.toLowerCase())
+		);
+		if (searchText.trim().length > 0) {
+			setDisplayProducts(matchedProducts);
+		} else {
+			setDisplayProducts([]);
+		}
+	};
+
 	return (
 		<Container
 			fluid
@@ -15,7 +28,8 @@ const SearchContainer = () => {
 					<input
 						type="text"
 						className="input"
-						placeholder="Search food items"
+						onChange={handleSearch}
+						placeholder="Search breakfast,lunch &amp; dinner"
 					/>
 					<div className="btn btn_common">
 						<ImSearch className="fas fa-search" />
