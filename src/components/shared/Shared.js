@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Gallery from '../Gallery/Gallery';
 import HomeBanner2 from '../HomeBanner2/HomeBanner2';
 import Menu from '../Menu/Menu';
+import Newsletter from '../Newsletter/Newsletter';
 import OurDetails from '../OurDetails/OurDetails';
+import Review from '../Review/Review';
 import SearchProducts from '../SearchProducts/SearchProducts';
 
 const Shared = ({ products, setDisplayProducts, displayProducts }) => {
@@ -44,6 +46,8 @@ const Shared = ({ products, setDisplayProducts, displayProducts }) => {
 				filterItems={filterItems}
 			/>
 			<OurDetails />
+			<Review />
+			<Newsletter />
 		</>
 	);
 };

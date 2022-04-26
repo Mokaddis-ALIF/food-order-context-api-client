@@ -1,7 +1,7 @@
 .bg_img {
 	background-image: url(../../assets/bannerbackground.png);
 	background-size: cover;
-	min-height: 60vh;
+	min-height: 80vh;
 	position: relative;
 }
 

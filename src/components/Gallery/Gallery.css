@@ -5,3 +5,16 @@
 .card:hover {
 	transform: scale(1.1);
 }
+
+.swiper-button-prev {
+	color: red;
+}
+
+.swiper-button-next {
+	color: red;
+}
+
+.swiper-pagination-bullet-active {
+	margin-top: 5rem;
+	background-color: red !important;
+}
