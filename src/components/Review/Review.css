@@ -80,6 +80,7 @@
 	position: relative;
 	margin-top: 20px;
 	display: inline-block;
+	color: gold;
 }
 
 /* .star-rating::before {

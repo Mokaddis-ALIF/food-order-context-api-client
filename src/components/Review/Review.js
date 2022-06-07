@@ -3,6 +3,7 @@ import './Review.css';
 import title from '../../assets/images/title-shape.svg';
 import testimonialImg from '../../assets/images/testimonial-img.png';
 import { BsFillStarFill } from 'react-icons/bs';
+import { BsStarHalf } from 'react-icons/bs';
 
 const Review = () => {
 	return (
@@ -45,7 +46,7 @@ const Review = () => {
 														<BsFillStarFill />
 														<BsFillStarFill />
 														<BsFillStarFill />
-														<BsFillStarFill />
+														<BsStarHalf />
 													</div>
 												</div>
 											</div>
@@ -72,7 +73,7 @@ const Review = () => {
 														<BsFillStarFill />
 														<BsFillStarFill />
 														<BsFillStarFill />
-														<BsFillStarFill />
+														<BsStarHalf />
 													</div>
 												</div>
 											</div>
@@ -99,7 +100,7 @@ const Review = () => {
 														<BsFillStarFill />
 														<BsFillStarFill />
 														<BsFillStarFill />
-														<BsFillStarFill />
+														<BsStarHalf />
 													</div>
 												</div>
 											</div>
@@ -126,7 +127,7 @@ const Review = () => {
 														<BsFillStarFill />
 														<BsFillStarFill />
 														<BsFillStarFill />
-														<BsFillStarFill />
+														<BsStarHalf />
 													</div>
 												</div>
 											</div>
