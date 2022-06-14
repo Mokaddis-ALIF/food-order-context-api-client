@@ -55,6 +55,7 @@ const Gallery = () => {
 					998: {
 						width: 998,
 						slidesPerView: 3,
+						initialSlide: 1,
 					},
 				}}
 				effect={'coverflow'}

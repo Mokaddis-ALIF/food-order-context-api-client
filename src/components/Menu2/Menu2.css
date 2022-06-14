@@ -1,0 +1,5 @@
+.food2-btns {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
